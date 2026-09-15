@@ -1,0 +1,14 @@
+langgraph
+langgraph-checkpoint-sqlite
+langchain
+langchain-google-genai
+langchain-community
+tavily-python
+python-dotenv
+fastapi
+uvicorn
+pydantic
+chromadb
+langchain-chroma
+langgraph-checkpoint-postgres
+psycopg[binary]

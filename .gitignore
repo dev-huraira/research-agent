@@ -1,0 +1,23 @@
+# Environment variables (contains real API keys — never commit this)
+.env
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local databases
+checkpoints.sqlite
+*.sqlite3
+
+# Chroma vector store data (if it writes local files)
+chroma_db/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS-specific
+Thumbs.db
