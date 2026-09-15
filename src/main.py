@@ -1,16 +1,29 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from langchain_core.messages import HumanMessage
+from fastapi.middleware.cors import CORSMiddleware
 import time
 import logging
 
 from src.agent_graph import agent_app
 from src.state import AgentState
 
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("research_agent")
 
 app = FastAPI(title="Research Agent API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",           # local Next.js dev server
+        "https://your-frontend.vercel.app", # replace with your real Vercel URL once you have it
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 
 class ChatRequest(BaseModel):
