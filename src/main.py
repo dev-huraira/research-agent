@@ -17,7 +17,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",           # local Next.js dev server
-        "https://your-frontend.vercel.app", # replace with your real Vercel URL once you have it
+        "https://researchagent-ui.vercel.app/", # replace with your real Vercel URL once you have it
     ],
     allow_credentials=True,
     allow_methods=["*"],
